@@ -10,6 +10,13 @@
 }
 /* Landing Page */
 
+/*Taille text erreur sur le formulaire*/
+.sizeTextError
+{
+  color: #fe142f;
+  font-size: 1.0rem;
+}
+
 body {
   margin: 0;
   display: flex;
