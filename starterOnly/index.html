@@ -52,7 +52,7 @@
         </button>
       </div>
 
-      <div class="bground">
+      <div class="bground" id="inscription">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
@@ -68,7 +68,7 @@
                 <input
                   class="text-control"
                   type="text"
-                  id="first"
+                  id="firstName"
                   name="first"
                   minlength="2"
                 /><br>
@@ -79,7 +79,7 @@
                 <input
                   class="text-control"
                   type="text"
-                  id="last"
+                  id="lastName"
                   name="last"
                 /><br>
               </div>
@@ -89,7 +89,7 @@
                 <input
                   class="text-control"
                   type="email"
-                  id="email"
+                  id="mail"
                   name="email"
                 /><br>
               </div>
@@ -101,6 +101,8 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  min = "1930-01-01"
+                  max = "2006-01-01"
                 /><br>
               </div>
               <div
@@ -187,7 +189,7 @@
                   id="checkbox1"
                   checked
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label" id="checkbox1" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
