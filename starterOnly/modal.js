@@ -54,7 +54,9 @@ function CloseModal() {
   
   var quantity = document.getElementById("quantity");
 
-
+  //message de validation
+  var validationForm= document.getElementById("validationForm");
+  var suscribe = document.getElementById("suscribe");
 
   //validation modal
   document.getElementById("inscription").addEventListener("submit",function(e){
@@ -209,10 +211,16 @@ function CloseModal() {
       if(firstNameBool === true && lastNameBool === true  && emailBool === true && birthdateBool === true && quantityBool === true  && conditionBool === true && locationBool === true ) 
       {
         e.preventDefault();
-        alert('formulaire envové');
+        var validationForm= document.getElementById("validationForm");
+        var suscribe = document.getElementById("suscribe");
+        suscribe.style.display = "none"
+        validationForm.style.display = "flex";
       }
       else {
         e.preventDefault();
+        document.getElementById('validForm').innerHTML = "";
+        suscribe.style.display = "block"
+        validationForm.style.display = "none";
       }
     });
     
