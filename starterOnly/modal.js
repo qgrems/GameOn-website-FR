@@ -79,7 +79,7 @@ var locationBool = false;
   function firstNameValid()
   {
    
-    if (firstName.value === "" || firstName.value.length < 2)
+    if (firstName.value === "" || firstName.value.length < 2 || !isNaN(firstName.value))
     {
       e.preventDefault();
       document.getElementById('erreur_firstName').innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du prénom."
@@ -95,7 +95,7 @@ var locationBool = false;
 
   function lastNameValid()
   {
-    if (lastName.value === "" || lastName.value.length < 2)
+    if (lastName.value === "" || lastName.value.length < 2 || !isNaN(lastName.value))
     {
       e.preventDefault();
       document.getElementById('erreur_lastName').innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du nom."
