@@ -12,26 +12,29 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 
+// button close
+const BtnClose = document.querySelectorAll(".close,.btn-close");
+BtnClose.forEach(elt => elt.addEventListener("click", CloseModal));
 
+   
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-//x button close
-BtnClose.forEach(elt => elt.addEventListener("click", CloseModal));
-const BtnClose = document.querySelectorAll(".close,.btn-close");
+
 
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-// close modal
+//close modal
 function CloseModal() {
   modalbg.style.display = "none";
 }
-
 //bordure rouge
+var redborder = document.getElementsByClassName("redBorder");
 var borderRed = '#fe142f 2px solid'
+
 
 // creation  recuperation variable 
 var condition = document.getElementById("checkbox1");
@@ -53,8 +56,11 @@ var birthdate = document.getElementById("birthdate");
 var quantity = document.getElementById("quantity");
 var erreur_concour;
 // message de validation
-var validationForm= document.getElementById("validationForm");
+
 var suscribe = document.getElementById("suscribe");
+
+//Bool validation formulaire
+
 
 
 //validation modal
@@ -73,7 +79,7 @@ var locationBool = false;
   function firstNameValid()
   {
    
-    if (firstName.value === "" || firstName.value.length < 2 || !isNaN(firstName.value) )
+    if (firstName.value === "" || firstName.value.length < 2)
     {
       e.preventDefault();
       document.getElementById('erreur_firstName').innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du prénom."
@@ -89,7 +95,7 @@ var locationBool = false;
 
   function lastNameValid()
   {
-    if (lastName.value === "" || lastName.value.length < 2 || !isNaN(firstName.value))
+    if (lastName.value === "" || lastName.value.length < 2)
     {
       e.preventDefault();
       document.getElementById('erreur_lastName').innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du nom."
